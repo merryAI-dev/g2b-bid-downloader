@@ -1,0 +1,16 @@
+# 나라장터 입찰공고 검색 스킬 의존성
+
+# HTTP 요청 및 API 호출
+requests>=2.27.0
+
+# 브라우저 자동화 (파일 다운로드용)
+playwright>=1.40.0
+
+# HWP 파싱 (나라장터 특수 포맷)
+olefile>=0.46
+
+# HWP 파싱 대안 (선택사항 - 나라장터 HWP는 호환 안 될 수 있음)
+# pyhwp
+
+# 설치 후 추가 작업 필요:
+# playwright install chromium
