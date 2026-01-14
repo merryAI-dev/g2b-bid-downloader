@@ -4,7 +4,7 @@ Claude Code용 나라장터(g2b.go.kr) 입찰공고 자동 검색, 파일 다운
 
 ## 주요 기능
 
-- **입찰공고 검색**: 나라장터 API를 통한 실시간 검색 (기본 90일)
+- **입찰공고 검색**: 나라장터 크롤링을 통한 실시간 검색 (기본 90일)
 - **파일 자동 다운로드**: Playwright 기반 k00 토큰 캡처 + Raonkupload 다운로드
 - **HWP 파싱**: 나라장터 특수 HWP 포맷 지원 (olefile + zlib)
 - **SWOT 분석**: Claude 기반 입찰 적합도 자동 분석
@@ -42,16 +42,6 @@ pip install -r requirements.txt
 playwright install chromium
 ```
 
-### 4. 환경 변수 (선택사항)
-
-Public Data API 사용시 필요:
-
-```bash
-export G2B_API_KEY="your_api_key_here"
-```
-
-API 키 발급: [공공데이터포털](https://www.data.go.kr/) → 나라장터 입찰정보 서비스
-
 ## 사용법
 
 ### Claude Code에서 실행
@@ -86,12 +76,6 @@ python scripts/g2b_file_downloader.py "액셀러레이팅" --list-only
 python scripts/g2b_file_downloader.py "액셀러레이팅" --indices 1,2,3
 ```
 
-**Open API 검색**
-
-```bash
-python scripts/g2b_openapi.py "스타트업"
-```
-
 ## 검색 키워드 예시
 
 | 키워드 | 설명 |
@@ -107,7 +91,7 @@ python scripts/g2b_openapi.py "스타트업"
 ```
 1. 관심 분야 선택
    ↓
-2. 나라장터 검색 (API/크롤링)
+2. 나라장터 검색 (크롤링)
    ↓
 3. 공고 목록 제시 (테이블)
    ↓
