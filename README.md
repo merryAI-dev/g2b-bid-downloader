@@ -32,7 +32,7 @@ npm install -g @anthropic-ai/claude-code
 cd ~/.claude/skills
 
 # 이 레포지토리 클론
-git clone https://github.com/YOUR_USERNAME/g2b-bid-downloader.git
+git clone https://github.com/merryAI-dev/g2b-bid-downloader.git
 
 # Python 의존성 설치
 cd g2b-bid-downloader
